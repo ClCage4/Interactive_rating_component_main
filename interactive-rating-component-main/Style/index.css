@@ -18,6 +18,11 @@ body {
   font-family: "Overpass", sans-serif;
   font-size: 15px;
   background-color: hsl(216, 12%, 8%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
 ul {
   list-style-type: none;
@@ -25,9 +30,24 @@ ul {
 button {
   font-family: inherit;
 }
+h1,
+h2 {
+  color: #fff;
+}
 p {
   line-height: 1.8;
+  color: hsl(217, 12%, 63%);
 }
+p.disclaimer {
+  padding: 0 1.5rem;
+  max-width: 400px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+img {
+  max-width: 100%;
+}
+
 .main-container,
 .thank-you {
   background-color: hsl(213, 19%, 18%);
@@ -43,25 +63,51 @@ p {
   color: #fff;
   margin: 2rem 0 1rem;
 }
-.main-container p {
+.container p {
   color: hsl(217, 12%, 63%);
   margin-bottom: 1rem;
 }
-.margin-container ul {
+.container ul {
   display: flex;
+  font-family: inherit;
+  font-size: 1rem;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 2rem;
 }
-.main-container ul li button {
+.btn {
+  background-color: hsl(213, 20%, 22%);
   width: 3rem;
   height: 3rem;
-  border: none;
-  background-color: hsl(213, 20%, 22%);
   color: #fff;
-  padding-top: 0.2rem;
+  border: none;
   border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  padding-top: 0.3rem;
+  transition: 0.3s;
 }
+.btn hover {
+  background-color: hsl(25, 97%, 53%);
+}
+.btn-submit {
+  background-color: hsl(25, 97%, 53%);
+  padding: 0.625rem 2rem 0.5rem;
+  width: 100%;
+  border: none;
+  border-radius: 30px;
+  color: #fff;
+  margin-top: 2rem;
+  transition: 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 0.9rem;
+}
+.btn:focus {
+  background-color: hsl(217, 12%, 63%);
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
